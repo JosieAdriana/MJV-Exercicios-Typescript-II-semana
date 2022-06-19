@@ -25,14 +25,12 @@ console.log("1- ", {
   interests: "cursos de linguagens de programação, MJV, filmes, séries"
 });
 
-
 /* 3 - Faça uma função que receba como argumento um objeto do tipo do exercício 1, 
  e retorne somente a lista de assuntos do objeto.
  */
 function listInterests(student: Student) {
   return student.interests
 }
-
 
 //4 - Coloque a tipagem tanto no argumento da função do exercício 3 quanto no tipo de retorno dela.
 
@@ -81,6 +79,7 @@ function getTeachersName(teachers: Teacher[]): string[] {
     return teacher.name;
   });
 }
+
 const names: string[] = getTeachersName(teachers)
 
 //10 - Faça uma função que receba um argumento de array de Professores e retorne um array de materias.
@@ -96,7 +95,8 @@ function getSubjectsByTeacherCollection(teachers: Teacher[]): string[] {
 
   return collection;
 }
-const subjects = getSubjectsByTeacherCollection(teachers)
+
+const subjects: string[] = getSubjectsByTeacherCollection(teachers)
 
 /* 11 - Faça uma função que receba um argumento de array de Professores e 
 retorne o primeiro Professor encontrado que dê aula de Typescript.
@@ -107,5 +107,6 @@ function getFirstTypescriptTeacher(teachers: Teacher[]): Teacher | undefined {
   });
 }
 
-const teacher = getFirstTypescriptTeacher(teachers);
+const teacher: Teacher | undefined = getFirstTypescriptTeacher(teachers);
+
 console.log(teacher)
